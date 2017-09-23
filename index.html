@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+
+<html lang="en-us">
+<head>
+
+    <meta charset="UTF-8">
+    <title>The Simpson's Trivia Game!</title>
+	 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+</head>
+        
+
+  <body>
+
+  	<div class="wrapper">
+
+      <div id="show-number"></div>
+
+    <br>
+
+    <button id="stop">Stop</button>
+    <button id="resume">Resume</button>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Script -->
+    <script type="text/javascript">
+
+    var number = 45;
+
+    var intervalId;
+
+    $("#stop").on("click", stop);
+
+    $("#resume").on("click", run);
+
+    function run() {
+      intervalId = setInterval(decrement, 1000);
+    }
+
+    function decrement() {
+
+      number--;
+
+      $("#show-number").html("<h2>" + number + "</h2>");
+
+      if (number === 0) {
+
+        stop();
+
+        alert("Time Is Up!");
+      }
+    }
+
+    function stop() {
+
+      clearInterval(intervalId);
+    }
+
+    run();
+
+    </script>
+
+   <h1>"The Simpson's" Trivia Game</h1>
+   <h2> By Kimberly Jonasse </h2>
+
+   <form id = "quiz" name = "quiz">
+
+   	<p class = "questions">What state is The Simpson's based in?</p>
+   	<input type = "radio" id = "mc" name = "question1" value = "Pennsylvania"> Pennsylvania<br>
+   	<input type = "radio" id = "mc" name = "question1" value = "Hawaii"> Hawaii<br>
+   	<input type = "radio" id = "mc" name = "question1" value = "Ohio"> Ohio<br>
+   	<input type = "radio" id = "mc" name = "question1" value = "Oregon"> Oregon<br>
+
+   	<p class = "questions">Which Simpson's character has 5 fingers?</p>
+   	<input type = "radio" id = "mc" name = "question2" value = "Marge"> Marge<br>
+   	<input type = "radio" id = "mc" name = "question2" value = "Bart"> Bart<br>
+   	<input type = "radio" id = "mc" name = "question2" value = "God"> God<br>
+   	<input type = "radio" id = "mc" name = "question2" value = "Maggie"> Maggie<br>
+
+   	<p class = "questions">Homer Simpson once had a theory that the Earth was shaped like a:</p>
+   	<input type = "radio" id = "mc" name = "question3" value = "donut"> donut<br>
+   	<input type = "radio" id = "mc" name = "question3" value = "apple"> apple<br>
+   	<input type = "radio" id = "mc" name = "question3" value = "chicken wing"> chicken wing<br>
+   	<input type = "radio" id = "mc" name = "question3" value = "block of cheese"> block of cheese<br>
+
+   	<p class = "questions">The Simpson's made this word popular:</p>
+   	<input type = "radio" id = "mc" name = "question4" value = "gross"> gross<br>
+   	<input type = "radio" id = "mc" name = "question4" value = "meh"> meh<br>
+   	<input type = "radio" id = "mc" name = "question4" value = "never"> never<br>
+   	<input type = "radio" id = "mc" name = "question4" value = "dude"> dude<br>
+
+   	<p class = "questions">The Simpson's have had more guest stars than they have had:</p>
+   	<input type = "radio" id = "mc" name = "question5" value = "holidays"> holiday<br>
+   	<input type = "radio" id = "mc" name = "question5" value = "dinners"> dinners<br>
+   	<input type = "radio" id = "mc" name = "question5" value = "episodes"> episodes<br>
+   	<input type = "radio" id = "mc" name = "question5" value = "reunions"> reunions<br>
+
+
+	   
+    <input id = "button" type = "button" value = "I'm finished!" onclick="check()">
+   
+ </form>
+
+<div id = "after_submit">
+<p id = "number_correct"></p>
+<p id = "message"></p>
+<img id = "picture">
+</div> 
+
+<!-- JavaScript File & jQuery Lib -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="assets/javascript/app.js"></script>
+    </body>
+</html>

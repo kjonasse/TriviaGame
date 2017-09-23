@@ -1,0 +1,98 @@
+/** Trivia Game Homework #5
+ 
+ **/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    background: #434a54;
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+p {
+    color: black;
+    text-align: center;
+}
+
+
+h1 {
+    color: black;
+    margin-left: 20px;
+    font-family: 'Pacifico', Helvetica, sans-serif;
+}
+
+h2 {
+  color: #4aaaa5
+  font-family: 'Georgia', Times, Times New Roman, serif;;
+}
+
+h4 {
+  color: black;
+}
+
+
+.wrapper {
+  width: 70%;
+  padding-top: 25px;
+  margin-top: 75px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #FFD90F;
+  border-radius: 25px;
+  text-align: center;
+  padding-bottom: 25px;
+
+}
+
+#container {
+  background-color: #FFD90F;
+  font-family: 'Georgia', Times, Times New Roman, serif;
+  width: 800px;
+  height: 1500px;
+  position: static;
+  text-align: center;
+  padding-top: 10px;
+  float: center;
+  margin: auto;
+  margin-top: 75px;
+}
+
+#button {
+  background: red;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  transition-duration: .3s;
+  margin-top: 15px;
+}
+
+#button:hover {
+  background: white;
+  border: 1px solid green;
+  color: black;
+  cursor: pointer;
+}
+
+#picture {
+  width: 375px;
+  height: 245px;
+}
+
+#after_submit {
+  color: black;
+  width: 70%;
+  padding-top: 25px;
+  margin-top: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: orange;
+  border-radius: 25px;
+  text-align: center;
+  padding-bottom: 25px;
+}
